@@ -1,0 +1,17 @@
+.*.swp
+*.aux
+*.log
+*.out
+*.rel
+tex.synctex.gz
+*.toc
+tex.pdf
+.synctex.gz
+_region_.tex
+doc/tex/auto/
+.DS_Store
+doc/pm/auto/
+doc/whoami/auto/
+doc/quality/auto/
+pm.pdf
+whoami.pdf
