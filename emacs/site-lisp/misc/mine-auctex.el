@@ -1,5 +1,6 @@
 ;;;;;;;;;;;;;;AUCTex initiating;;;;
 (add-to-list 'load-path "~/.emacs.d/site-lisp/misc")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/auctex-11.87")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet-0.6.1c/")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-1.3.1/")
 (load "auctex.el" nil t t)

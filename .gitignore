@@ -15,3 +15,8 @@ doc/whoami/auto/
 doc/quality/auto/
 pm.pdf
 whoami.pdf
+emacs/.emacs.desktop
+emacs/.emacs.desktop.lock
+emacs/ac-comphist.dat
+emacs/auto-save-list/
+emacs/eshell/
