@@ -1,0 +1,87 @@
+\section{git相关}
+
+参考手册：\url{http://git-scm.com/book/zh}
+
+\subsection{安装配置}
+\label{sec:git-install-config}
+
+\paragraph{安装}
+\label{sec:git-install}
+
+\begin{description}
+\item[Linux] 命令：
+\begin{lstlisting}[numbers=none]
+# apt-get install git
+\end{lstlisting}
+\item[Windows] 在\url{http://code.google.com/p/msysgit/}下载，有GUI和命令行两种模式。
+\item[Mac] 暂空
+\end{description}
+
+\paragraph{配置}
+\label{sec:git-config}
+
+创建一个指向版本管理里的git配置文件的符号链接即可：
+\begin{lstlisting}[numbers=none]
+# ln -s /work/git/xbs/git/gitconfig ~/.gitconfig
+\end{lstlisting}
+
+\begin{description}
+\item[忽略文件] 将文件名或者文件类型添加到项目根目录下的.gitignore文件中，支持正则表达式，然后提交到库里面去，其他人就可以共用此设置了。
+\end{description}
+
+
+
+\subsection{日常操作}
+\label{sec:git-usage}
+
+\begin{description}
+\item[创建存储] 推荐在\url{https://bitbucket.org}上创建存储空间，因为在这里，可以不公开自己的项目代码，也能使用git工具。
+\item[获取代码] 例如，获取我的一个项目代码，会直接在当前目录下新建一个目录，里面有.git版本控制信息。
+\begin{lstlisting}[numbers=none]
+# git clone https://netcoffee@bitbucket.org/netcoffee/xbs.git
+\end{lstlisting}
+
+\item[查看log] 按照\ref{sec:git-config}里的“增强log显示”配置后，\verb| git lg |可显示优化后的log信息。
+\item[添加文件] 命令：
+\begin{lstlisting}[numbers=none]
+# touch README
+# git add .
+\end{lstlisting}
+\item[撤销添加] 命令：
+\begin{lstlisting}[numbers=none]
+# git reset HEAD README
+\end{lstlisting}
+\item[撤销修改] 命令：
+\begin{lstlisting}[numbers=none]
+# git checkout -- foobar.c
+\end{lstlisting}
+\item[提交修改] 命令：
+\begin{lstlisting}[numbers=none]
+# git commit .
+\end{lstlisting}
+
+如果是在emacs中，修改保存后，使用\verb|C-x v v|命令，然后写好注释，\verb|C-c C-c|即可提交，但是似乎只能对单个文件？
+
+如果提交后发现遗漏了一个文件，可以使用\verb|--amend|参数重新提交一遍：
+\begin{lstlisting}[numbers=none]
+# git commit -m 'initial commit'
+# git add forgotten_file
+# git commit --amend
+\end{lstlisting}
+\item[上传修改] 
+如果是第一次上传，
+\begin{lstlisting}[numbers=none]
+# git push origin master
+\end{lstlisting}
+后续可以直接上传：
+\begin{lstlisting}[numbers=none]
+# git push -u
+\end{lstlisting}
+
+\item[查看修改] 比如查看最近两次修改详细信息：
+\begin{lstlisting}[numbers=none]
+# git log -p -2
+\end{lstlisting}
+
+\end{description}
+

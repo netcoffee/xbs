@@ -1,0 +1,64 @@
+% latex-chinese-template v0.3   http://ctex-kit.googlecode.com/
+
+\documentclass[winfonts,UTF8,cs4size,a4paper,fancyhdr,fntef,hyperref]{ctexart}
+\usepackage[a4paper,centering,
+    left=1cm,right=1cm,
+    top=2cm,bottom=2cm,
+    ]{geometry}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+    extendedchars=false,% 重要！解决中文跨页出错的问题
+    backgroundcolor=\color{lightgray},
+    basicstyle={\ttfamily},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=t,
+    abovecaptionskip=0em,
+    belowcaptionskip=0em,
+    commentstyle=\color{olive},
+    extendedchars=false,
+    frame=none,
+    framerule=1pt,
+    framextopmargin=0pt,
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={*,define,*,include...},
+    numbers=left,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    stringstyle=\color{purple},
+    tabsize=4,
+    %escapeinside=``,
+    xleftmargin={2em},
+    xrightmargin={2em},
+    }
+\usepackage{caption}
+\setlength{\captionmargin}{2em}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\dimexpr\textwidth-18\fboxsep\relax}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{multicol}
+\begin{document}
+\title{\TeX 笔记}
+\author{徐宝松}
+
+\maketitle
+\begin{multicols}{2}
+\tableofcontents
+\end{multicols}
+
+\input{subfile_tex}
+\input{subfile_config}
+\input{subfile_git}
+\input{subfile_emacs}
+\input{subfile_vim}
+\input{subfile_mac}
+\input{subfile_skia}
+\input{subfile_misc}
+
+\end{document}

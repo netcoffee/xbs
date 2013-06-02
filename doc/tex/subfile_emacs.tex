@@ -1,0 +1,43 @@
+\section{Emacs相关}
+\subsection{安装配置}
+Emacs的配置文件，主要是一个启动文件，和一个存放第三方工具的目录，只需要把这两个文件，创建符号链接到相应的目录下即可，符号链接的目的地，不可更改，因为init.el里面写死了第三方的地址为\~/.emacs.d/site-lisp/目录。
+\begin{lstlisting}[numbers=none]
+# ln -s /work/git/xbs/emacs/init.el ~/.emacs.d/init.el
+# ln -s /work/git/xbs/emacs/site-lisp/ ~/.emacs.d/site-lisp
+\end{lstlisting}
+
+\subsection{常用操作}
+
+\subparagraph{终端下选择菜单：}
+可以先尝试F10，在Putty下面是可以工作的，如果不行的话，用命令M-x menu-bar-open也可以选择。
+\subparagraph{跳转行数：}
+\verb|M-G M-G|
+\subparagraph{合并此行到上一行：}
+\verb|M-^|
+\subparagraph{undo/redo：}
+安装undo-tree.el之后，undo可以用\verb|C-_|，redo可以用\verb|M-_|，想要图形化的操作可以用\verb|C-x u|。
+\subparagraph{搜索光标下的字符串}
+\verb|M-b|跳到词头后\verb|C-s C-w|，之后\verb|C-s|可循环搜索
+
+\subsection{Work with AUCTEX}
+\label{sec:work-with-auctex}
+AUCTEX是Emacs上比较好用的\TeX~编辑生成环境，可以很好的自动补全，快速插入章节、命令，也可以很方便的编译、预览等操作。
+\subsubsection{编辑}
+\label{sec:auctex-edit}
+\begin{itemize}
+\item 插入section：\verb|C-c C-s|
+\item 插入itemize：\verb|C-c C-e|，可选itemize/enumerate/description，写完一个item后，按\verb|C-c C-j|自动创建一个新的item，并对齐。
+\item 插入加粗字体：\verb|C-c C-f C-b|
+\item 插入斜体字体：\verb|C-c C-f C-i|
+\item 插入着重字体：\verb|C-c C-f C-e|
+\item 块注释：\verb|C-c %|
+\item 折叠文档：\verb|C-c C-o C-b|
+\item 反折叠文档：\verb|C-c C-o b|
+\end{itemize}
+
+\subsubsection{编译}
+\label{sec:auctex-compile}
+在\emph{主文件}里面，按\verb|C-c C-c|，即会提示\verb|Command: (default XeLaTeX)|，回车即用此命令编译，稍等一会儿，如果出错，会告诉你敲入\verb|C-c `|查看出错信息；如果没有出错，有中文书签时会提示你需要再运行一次生成书签信息，这时再运行一次\verb|C-c C-c|即可生成中文书签的PDF文件。
+\subsubsection{查看书签}
+\label{sec:auctex-view-toc}
+在主文件里面，按F10可打开终端下的Emacs菜单项，然后选择r，再选择r，即可在左侧打开预览的书签。\verb|C-x o|后跳转到此书签窗口，上下移动高亮条，按空格即可预览该条目信息；按\verb|< / >|键，可调整该条目的层级，功能很强大。其他详细信息，可以按\verb|?|来列出。

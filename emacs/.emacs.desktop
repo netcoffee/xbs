@@ -1,0 +1,248 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Mon Jul 30 15:12:06 2012
+;; Desktop file format version 206
+;; Emacs version 23.1.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("CEDET" "nativedecodefiledescriptor" "ECB can" "ECB can not" "lock" "config" "newaddr" "kbmpheadersize" "shrt_max" "drawtocanvas" "awtocanvas(canvas);\n        }\n\n   " "vas" "wtocanvas" "tocanvas(canvas);\n " "fra" "lib"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/work/git/xbs/emacs/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode srecode-minor-mode)
+  7273
+  '(7243 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/work/git/xbs/doc/tex/subfile_emacs.tex"
+  "subfile_emacs.tex"
+  'latex-mode
+  '(undo-tree-mode)
+  53
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/work/ics/frameworks/base/core/jni/android/graphics/BitmapFactory.cpp"
+  "BitmapFactory.cpp"
+  'c++-mode
+  '(abbrev-mode hi-lock-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode srecode-minor-mode)
+  7920
+  '(13833 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/work/ics/frameworks/base/core/java/android/view/SurfaceView.java"
+  "SurfaceView.java"
+  'jde-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode srecode-minor-mode jde-jdb-minor-mode jde-plugin-minor-mode)
+  15260
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/work/ics/external/skia/include/core/SkBitmap.h"
+  "SkBitmap.h"
+  'c-mode
+  '(abbrev-mode hi-lock-mode view-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode ede-minor-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode)
+  25001
+  '(24678 nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/usr/lib/gcc/x86_64-linux-gnu/4.4/include/stddef.h"
+  "stddef.h"
+  'c-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode)
+  6990
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/work/ics/external/skia/include/core/SkTypes.h"
+  "SkTypes.h"
+  'c-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode ede-minor-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode)
+  3251
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "core"
+  'dired-mode
+  nil
+  438
+  '(nil nil)
+  t
+  '("/work/ics/external/skia/include/core/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "include"
+  'dired-mode
+  nil
+  346
+  '(nil nil)
+  t
+  '("/work/ics/external/skia/include/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "skia"
+  'dired-mode
+  nil
+  640
+  '(nil nil)
+  t
+  '("/work/ics/external/skia/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "images<2>"
+  'dired-mode
+  nil
+  1835
+  '(nil nil)
+  t
+  '("/work/ics/external/skia/src/images/")
+  nil)
+
+(desktop-create-buffer 206
+  "/work/ics/frameworks/base/graphics/java/android/graphics/BitmapFactory.java"
+  "BitmapFactory.java"
+  'jde-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode srecode-minor-mode jde-jdb-minor-mode jde-plugin-minor-mode)
+  13922
+  '(26916 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/work/ics/frameworks/base/core/jni/android/graphics/Utils.h"
+  "Utils.h"
+  'c-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "graphics<2>"
+  'dired-mode
+  nil
+  450
+  '(nil nil)
+  t
+  '("/work/ics/frameworks/base/core/jni/android/graphics/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "graphics"
+  'dired-mode
+  nil
+  453
+  '(nil nil)
+  t
+  '("/work/ics/frameworks/base/graphics/java/android/graphics/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "android"
+  'dired-mode
+  nil
+  247
+  '(nil nil)
+  t
+  '("/work/ics/frameworks/base/graphics/java/android/")
+  nil)
+
+(desktop-create-buffer 206
+  "/work/ics/frameworks/base/graphics/java/android/graphics/Camera.java"
+  "Camera.java"
+  'jde-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode srecode-minor-mode jde-jdb-minor-mode jde-plugin-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/work/ics/frameworks/base/graphics/java/android/graphics/Canvas.java"
+  "Canvas.java"
+  'jde-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode srecode-minor-mode jde-jdb-minor-mode jde-plugin-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/work/ics/external/skia/src/images/SkJpegUtility.cpp"
+  "SkJpegUtility.cpp"
+  'c++-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode ede-minor-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode srecode-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/usr/include/sys/stat.h"
+  "stat.h"
+  'c-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode)
+  894
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/work/ics/external/skia/src/images/SkCreateRLEPixelRef.cpp"
+  "SkCreateRLEPixelRef.cpp"
+  'c++-mode
+  '(abbrev-mode undo-tree-mode semantic-highlight-edits-mode semantic-show-unmatched-syntax-mode semantic-show-parser-state-mode semantic-stickyfunc-mode semantic-highlight-func-mode ede-minor-mode senator-minor-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-idle-local-symbol-highlight-mode semantic-idle-completions-mode semantic-mru-bookmark-mode semantic-decoration-mode srecode-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+

@@ -1,0 +1,8 @@
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set smarttab
+
+"set tags+=tags;
+"nmap <C-N> :tnext<cr>
+"nmap <C-P> :tprev<cr>

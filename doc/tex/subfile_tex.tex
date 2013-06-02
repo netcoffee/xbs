@@ -1,0 +1,83 @@
+\section{\TeX~相关}
+\subsection{下载安装}
+\begin{description}
+\item[Windows:] \url{http://www.ctex.org} 下载全的CTeX套件并安装。
+\item[Mac OS X:] \url{http://www.tug.org/} 下载MacTeX全的安装包并安装。
+\item[Linux:] \url{http://www.tug.org/} 下载TeX Live全的安装包并安装。
+\end{description}
+
+\subsection{模板下载}
+\url{http://ctex-kit.googlecode.com/svn/trunk/templates/LaTeX/}
+\\
+复制一份改名，一定要保存为UTF-8格式的。如果是用WinEdt编辑器编辑，在Options-\-Preferences-\-Miscellaneous里面，修改Default Mode 为``TeX:UTF-8''，以后所有文件都默认为UTF-8格式编码。
+\\
+\subsection{编译}
+执行\textbf{两次}下面命令才能正常生成带中文书签和拷贝的PDF：
+\begin{lstlisting}[numbers=none]
+# xelatex utf8.tex
+\end{lstlisting}
+
+如果使用auctex的\verb|C-c C-c|来编译，如果需要再编译一次，会给出相应的提示，最后一次编译后会告诉你成功完成PDF文件了。有时候可能需要编译三次才行。
+
+\subsection{插入代码}
+在导言区插入下面代码：
+\begin{lstlisting}[language={TeX}]
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{ %Settings for listings package.
+    %language=[ANSI]{C},
+    extendedchars=false,% 重要！解决中文跨页出错的问题
+    backgroundcolor=\color{lightgray},
+    basicstyle={\ttfamily},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=t,
+    commentstyle=\color{olive},
+    %directivestyle=\color{blue},
+    extendedchars=false,
+    frame=tb,%single,%shadowbox
+    framerule=0pt,
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={*,define,*,include...},
+    numbers=left,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    %stepnumber=2,
+    stringstyle=\color{purple},
+    tabsize=4,
+    escapeinside=``,
+    xleftmargin={2em},
+    xrightmargin={2em},
+    %title=\lstname
+    }
+\usepackage{caption}
+\setlength{\captionmargin}{2em}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\end{lstlisting}
+然后在需要插入代码的地方，插入如下代码：
+\begin{verbatim}
+    \begin{lstlisting}[language={[ANSI]C},label=example,caption=例子]
+    int main(int argc, char ** argv)
+    {
+        printf("我爱中文!\n");
+        return 0;
+    }
+    \end{lstlisting}
+\end{verbatim}
+
+效果图如下：
+\begin{lstlisting}[language={[ANSI]C},label=example,caption=例子]
+int main(int argc, char ** argv)
+{
+    printf("我爱中文!\n");
+    return 0;
+}
+\end{lstlisting}
+
+\subsection{插入命令}
