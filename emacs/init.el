@@ -37,8 +37,6 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;;使用折行
 (setq truncate-partial-width-windows nil)
-;; goto-line
-(define-key global-map "\C-x\C-g" 'goto-line)
 ;; Backup
 (setq backup-directory-alist '(("." . "~/.emacs.d/backup")))
 (setq backup-by-copying t)
