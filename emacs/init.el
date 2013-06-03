@@ -37,7 +37,8 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;;使用折行
 (setq truncate-partial-width-windows nil)
-
+;; goto-line
+(define-key global-map "\C-x\C-g" 'goto-line)
 ;; Backup
 (setq backup-directory-alist '(("." . "~/.emacs.d/backup")))
 (setq backup-by-copying t)
@@ -93,16 +94,16 @@
 ;              (gtags-mode 1)
 ;      ))
 ;; Replace xgtags.el with gtags.el
-;(require 'xgtags)
-;(add-hook 'c-mode-common-hook
-;          (lambda ()
-;       (xgtags-mode 1)))
-;(add-hook 'c++-mode-hook
-;          (lambda ()
-;       (xgtags-mode 1)))
+(require 'xgtags)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+       (xgtags-mode 1)))
+(add-hook 'c++-mode-hook
+          (lambda ()
+       (xgtags-mode 1)))
 
 ;; Helm
-;(add-to-list 'load-path "~/.emacs.d/site-lisp/helm")
-;(require 'helm-config)
-;(helm-mode 1)
+(add-to-list 'load-path "~/.emacs.d/site-lisp/helm")
+(require 'helm-config)
+(helm-mode 1)
 
