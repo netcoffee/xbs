@@ -41,3 +41,43 @@ AUCTEX是Emacs上比较好用的\TeX~编辑生成环境，可以很好的自动�
 \subsubsection{查看书签}
 \label{sec:auctex-view-toc}
 在主文件里面，按F10可打开终端下的Emacs菜单项，然后选择r，再选择r，即可在左侧打开预览的书签。\verb|C-x o|后跳转到此书签窗口，上下移动高亮条，按空格即可预览该条目信息；按\verb|< / >|键，可调整该条目的层级，功能很强大。其他详细信息，可以按\verb|?|来列出。
+
+\subsection{Helm-mode}
+\label{sec:helm-mode}
+下载helm-mode的包，解压后放到\verb|~/.emacs.d/site-lisp|下;将下面代码放入\verb|init.el|中，然后\verb|M-x eval-buffer|执行就能生效。\verb|C-x C-f|试试看：
+\begin{lstlisting}[language={lisp},label=helm-mode,caption=安装helm-mode]
+;; Helm
+(add-to-list 'load-path "~/.emacs.d/site-lisp/helm")
+(require 'helm-config)
+(helm-mode 1)
+\end{lstlisting}
+
+\subsection{Work with global}
+\label{part:work-with-global}
+
+\subsubsection{安装}
+\begin{lstlisting}[language={lisp},label=xgtags-mode,caption=安装xgtags-mode]
+;; GNU Global
+(add-to-list 'load-path "~/.emacs.d/site-lisp/misc")
+(require 'xgtags)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+       (xgtags-mode 1)))
+(add-hook 'c++-mode-hook
+          (lambda ()
+       (xgtags-mode 1)))
+\end{lstlisting}
+
+\subsubsection{索引}
+在term下，进入项目的根目录，执行\verb|gtags|即可生成索引文件，下一次更新可以用\verb|global -vu|操作。
+\subsubsection{操作}
+\begin{itemize}
+\item 查找tag：\verb|M-.|
+\item 跳转下一个tag：\verb|C-c w n|
+\item 跳转上一个tag：\verb|C-c w p|
+\item 查找symbol：\verb|C-c w s|
+\item 查找reference：\verb|C-c w c|
+\item 查找文件：\verb|C-c w f|
+\end{itemize}
+
+
