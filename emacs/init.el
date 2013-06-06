@@ -1,5 +1,13 @@
 (load-file "~/.emacs.d/site-lisp/misc/mine-auctex.el")
 (load-file "~/.emacs.d/site-lisp/misc/mine-cedet.el")
+;;+set title as file name
+(setq frame-title-format
+(if (eq system-type 'windows-nt)
+      (list "WINNT@"(getenv "USERNAME")"@" "BJ" "  %b@%f@%p" :"%+"     )
+(if (eq system-type 'gnu/linux)
+;(list "Linux@"  "%f@%p" : "%+")))
+(list "%f")))
+)
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/misc")
 ;; highlight-symbol (like Shift-F8 in Source Insight)
@@ -12,10 +20,9 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 ;; JDEE
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/jdee-2.4.0.1/lisp"))
-;(add-to-list 'load-path (expand-file-name "~/emacs/site/cedet/common"))
-;(load-file (expand-file-name "~/emacs/site/cedet/common/cedet.el"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/jdee-2.4.1/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/elib-1.0"))
+(load "jde")
 ;(require 'jde)
 
 (global-auto-revert-mode t)
