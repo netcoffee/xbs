@@ -18,6 +18,8 @@ Emacs的配置文件，主要是一个启动文件，和一个存放第三方工
 安装undo-tree.el之后，undo可以用\verb|C-_|，redo可以用\verb|M-_|，想要图形化的操作可以用\verb|C-x u|。
 \subparagraph{搜索光标下的字符串}
 \verb|M-b|跳到词头后\verb|C-s C-w|，之后\verb|C-s|可循环搜索
+\subparagraph{书签设置和跳转}
+设置书签\verb|C-x r m|；跳转到书签\verb|C-x r b|；列出书签\verb|C-x r l|。
 
 \subsection{Work with AUCTEX}
 \label{sec:work-with-auctex}
@@ -78,6 +80,8 @@ AUCTEX是Emacs上比较好用的\TeX~编辑生成环境，可以很好的自动�
 \item 查找symbol：\verb|C-c w s|
 \item 查找reference：\verb|C-c w c|
 \item 查找文件：\verb|C-c w f|
+\item 返回：\verb|M-*|
+\item 选择光标下的tag：\verb|C-m|
 \end{itemize}
 
 

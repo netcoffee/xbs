@@ -718,7 +718,7 @@ with the previous query results."
           (when xgtags-update-db
             (xgtags--update-db xgtags-rootdir))
           (with-temp-buffer
-            (if (zerop (apply #'call-process "global" nil t nil
+            (if (zerop (apply #'call-process "global" nil t nil "-i"
                               (xgtags--list-sans-nil
                                "--cxref"
                                (xgtags--option-string option)

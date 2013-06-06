@@ -93,12 +93,6 @@
 ;(opengrok-minor-mode t)
 
 ;; GNU Global
-;(autoload 'gtags-mode "gtags" "" t)
-;(setq c-mode-hook
-;          '(lambda ()
-;              (gtags-mode 1)
-;      ))
-;; Replace xgtags.el with gtags.el
 (require 'xgtags)
 (add-hook 'c-mode-common-hook
           (lambda ()
@@ -111,4 +105,3 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/helm")
 (require 'helm-config)
 (helm-mode 1)
-
