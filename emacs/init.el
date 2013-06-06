@@ -24,6 +24,10 @@
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
+;; JDEE
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/jdee-2.4.1/lisp"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/elib-1.0"))
+(load "jde")
 
 (global-auto-revert-mode t)
 ;;(set-w32-system-coding-system 'utf-8)
