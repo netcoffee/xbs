@@ -9,6 +9,11 @@
 (list "%f")))
 )
 
+(if (eq system-type 'gnu/linux)
+    (load-file "~/.emacs.d/site-lisp/misc/mine-linux.el")
+(if (equal system-type 'darwin)
+    (load-file "~/.emacs.d/site-lisp/misc/mine-mac.el")))
+
 (add-to-list 'load-path "~/.emacs.d/site-lisp/misc")
 ;; highlight-symbol (like Shift-F8 in Source Insight)
 (require 'highlight-symbol)
@@ -19,11 +24,6 @@
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
-;; JDEE
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/jdee-2.4.1/lisp"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/elib-1.0"))
-(load "jde")
-;(require 'jde)
 
 (global-auto-revert-mode t)
 ;;(set-w32-system-coding-system 'utf-8)
@@ -101,7 +101,17 @@
           (lambda ()
        (xgtags-mode 1)))
 
-;; Helm
-(add-to-list 'load-path "~/.emacs.d/site-lisp/helm")
-(require 'helm-config)
-(helm-mode 1)
+
+;; ==================================================
+;; [] match
+;;Emacs 在匹配的括号之间来回跳转的时候按 C-M-f 和 C-M-b 太麻烦。
+;;vi的 % 就很方便，把 % 设置为匹配括号。
+;;当 % 在括号上按下时，那么匹配括号，否则输入一个 %。
+(global-set-key "%" 'match-paren)
+(defun match-paren (arg)
+  "Go to the matching paren if on a paren; otherwise insert %."
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+    (t (self-insert-command (or arg 1)))))
+;; end [] match
