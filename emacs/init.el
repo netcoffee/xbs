@@ -1,5 +1,5 @@
 (load-file "~/.emacs.d/site-lisp/misc/mine-auctex.el")
-(load-file "~/.emacs.d/site-lisp/misc/mine-cedet.el")
+;(load-file "~/.emacs.d/site-lisp/misc/mine-cedet.el")
 ;;+set title as file name
 (setq frame-title-format
 (if (eq system-type 'windows-nt)
