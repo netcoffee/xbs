@@ -123,3 +123,9 @@
 (autoload 'svn-status "dsvn" "Run `svn status'." t)
 (autoload 'svn-update "dsvn" "Run `svn update'." t)
 (require 'vc-svn)
+(eval-after-load "vc-hooks"
+         '(define-key vc-prefix-map "=" 'ediff-revision))
+;; horizon split window for ediff
+(setq ediff-split-window-function 'split-window-horizontally)
+;; ediff -- no other window
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
